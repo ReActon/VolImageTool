@@ -1,0 +1,23 @@
+*Author: Ryan Acton ACTRYA001*
+*CSC3022F Assignment 2*
+
+The program will compile by typing make, after files are extracted.
+The program can then be run by typing: ./volimage MRI
+and then the required flags.
+
+For instance if you want to create a diffmap of the images from point x to point y,
+the leading flag must be '-d' and there has to be two separated numbers followed by
+the output file name of your own selection.
+An example input for this option is thus: ./volimage MRI -d 10 25 output
+
+If you wanted to extract an image, you must precede with a '-x' flag followed by the image
+number you wish to extract. This image is then viewable using the python viewer that is included 
+in the submitted files.
+An example input is this: ./volimage MRI -x 40 output
+Following which: python viewer.py output.raw 429 303 will allow you to view the resultant image
+of those dimensions of image number 40. The name before the .raw extension is whatever filename
+was inputted after the image number.
+
+Finally not including any flags or files or numbers will result in the internal representation
+being built and the number of images along with the number of bytes required to store these
+images will be displayed.
